@@ -1,86 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
-            rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="assents/css/principal.css">
-        <title>Document</title>
-    </head>
-    <body
-        class="min-h-screen flex items-center justify-center bg-red-900 bg-opacity-30">
 
-        <main
-            class="grid grid-cols-12 grid-rows-6 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 sm:h-3/4 md:h-2/3 lg:h-1/2 xl:h-2/5"
-            style="width: 900px; height: 600px;">
-            <!-- Lateral -->
-            <aside class="lateral" style=" background-color: red;">
-                <div class="espaco"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assents/css/principal.css">
 
-                <div class="navbar-collapse justify-content-end"
-                    id="menu_lateral">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Favoritos ❤</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Salgados 🥟</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bebidas 🥤</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Almoço 🍽</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Jantinha 🍜</a>
-                        </li>
-                    </div>
+    <title>Document</title>
+</head>
 
-                    <!-- Div para controle de espaço e botão entrar em contato -->
-                    <div class="inferior">
-                        <div id="contato">
-                            <a href="contato.html">Entrar em contato</a>
-                        </div>
-                    </div>
+<body class="min-h-screen flex items-center justify-center bg-red-900 bg-opacity-30">
 
-                </aside>
-                <!-- Superior -->
-                <aside
-                    class="flex justify-between items-end p-1 pb-1 pt-2 pl-2 superior">
+    <main class="grid grid-cols-12 grid-rows-6 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 sm:h-3/4 md:h-2/3 lg:h-1/2 xl:h-2/5"
+        style="width: 900px; height: 600px;">
 
-                    <div class="flex items-center">
-                        <!-- Campo de pesquisa visível em telas médias e maiores  -->
-                        <i
-                            class="bi bi-search text-black absolute left-3 top-1/2 transform -translate-y-1/2 hidden sm:block sm:static sm:translate-y-0 sm:mr-2"></i>
-                        <input type="text"
-                            class="pl-10 pr-2 py-1 sm:py-2 lg:py-3 border border-gray-300 rounded-full w-1/2 sm:w-3/4 lg:w-4/5 h-8 sm:h-10 lg:h-12"
-                            placeholder="Pesquisar...">
+        <!-- Superior -->
+        <aside class="flex justify-between items-end p-1 pb-1 pt-2 pl-2 superior">
 
-                        <button
-                            class="ml-2 p-2 bg-red-900 bg-opacity-50 rounded-full hover:bg-opacity-100">
-                            <i class="bi bi-funnel-fill"></i>
-                        </button>
-                    </div>
-                    <div>
-                        <button
-                            class="ml-2 p-2 bg-red-900 bg-opacity-50 rounded-full hover:bg-opacity-100">
-                            <i class="bi bi-basket2-fill"></i>
-                        </button>
-                    </div>
+            <div class="flex items-center">
+                <!-- Campo de pesquisa visível em telas médias e maiores  -->
+                <i
+                    class="bi bi-search text-black absolute left-3 top-1/2 transform -translate-y-1/2 hidden sm:block sm:static sm:translate-y-0 sm:mr-2"></i>
+                <input type="text"
+                    class="pl-10 pr-2 py-1 sm:py-2 lg:py-3 border border-gray-300 rounded-full w-1/2 sm:w-3/4 lg:w-4/5 h-1/2 sm:h-10 lg:h-12"
+                    placeholder="Pesquisar...">
 
-                </aside>
-                <!-- Painel -->
-                <aside class="painel" style="background-color: green;">
+                <button class="ml-2 pl-3 pr-3 pt-2 pb-2 bg-red-900 bg-opacity-20 rounded-2xl hover:bg-opacity-30">
+                    <i class="bi bi-funnel-fill"></i>
+                </button>
+            </div>
+            <div>
+                <button class="ml-2 pl-3 pr-3 pt-2 pb-2 bg-red-900 bg-opacity-20 rounded-2xl hover:bg-opacity-30">
+                    
+                    <i class="bi bi-basket2-fill"></i>
+                    <a href="#.hmtl"></a>
+                </button>
+            </div>
 
-                </aside>
-            </main>
+        </aside>
 
-            <script src="assents/js/principal.js"></script>
-            <script src="assents/js/pop-up.js"></script>
-        </body>
-    </html>
+        <!-- Lateral -->
+        <aside class="lateral grid grid-cols-3 grid-rows-6 mr-2">
+            <!-- <div class=" espaco w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-1/5"></div> -->
+
+            <div class="navbar-collapse justify-content-end flex items-center justify-center mb-32 bg-red-900 bg-opacity-10 w-full h-full rounded-tl-3xl rounded-tr-3xl" id="menu_lateral">
+                <ul class="navbar-nav">
+                    <li class="nav-item flex items-center justify-center rounded-2xl bg-red-900 bg-opacity-0 hover:bg-opacity-10">
+                        <a class="nav-link p-4 " href="#">
+                            <span class="hidden sm:inline">Favoritos ❤</span>
+                            <span class="sm:hidden">Favoritos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item flex items-center justify-center rounded-2xl bg-red-900 bg-opacity-0 hover:bg-opacity-10">
+                        <a class="nav-link p-4" href="#">
+                            <span class="hidden sm:inline">Salgados 🥟</span>
+                            <span class="sm:hidden">Salgados</span>
+                        </a>
+                    </li>
+                    <li class="nav-item flex items-center justify-center rounded-2xl bg-red-900 bg-opacity-0 hover:bg-opacity-10">
+                        <a class="nav-link p-4" href="#">
+                            <span class="hidden sm:inline">Bebidas 🥤</span>
+                            <span class="sm:hidden">Bebidas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item flex items-center justify-center rounded-2xl bg-red-900 bg-opacity-0 hover:bg-opacity-10">
+                        <a class="nav-link p-4" href="#">
+                            <span class="hidden sm:inline">Almoço 🍽</span>
+                            <span class="sm:hidden">Almoço</span>
+                        </a>
+                    </li>
+                    <li class="nav-item flex items-center justify-center rounded-2xl bg-red-900 bg-opacity-0 hover:bg-opacity-10">
+                        <a class="nav-link p-4" href="#">
+                            <span class="hidden sm:inline">Jantinha 🍜</span>
+                            <span class="sm:hidden">Jantinha</span>
+                        </a>
+                    </li>
+            </div>
+
+            <!-- Div para controle de espaço e botão entrar em contato -->
+            <div
+                class="contato flex justify-center items-center w-full h-full rounded-bl-3xl rounded-br-3xl bg-red-900 bg-opacity-10">
+                <div id="contato" class="bg-red-900 bg-opacity-0 hover:bg-opacity-10  rounded-2xl hover:cursor-pointer flex justify-center items-center">
+                    <a href="contato.html" class="text-base sm:text-lg md:text-xl p-2">
+                        <span class="hidden sm:inline">Entrar em contato</span>
+                        <span class="sm:hidden">Contato</span>
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Painel -->
+        <aside class="painel" style="background-color: green;">
+
+            <div class="">
+                
+            </div>
+
+        </aside>
+    </main>
+
+    <script src="assents/js/principal.js"></script>
+    <script src="assents/js/pop-up.js"></script>
+</body>
+
+</html>
