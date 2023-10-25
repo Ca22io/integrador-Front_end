@@ -1,0 +1,18 @@
+main {
+    grid-template-areas:
+        ". s s s s s s s s s ."
+        ". p p p p p p p p p ."
+        ". p p p p p p p p p ."
+        ". p p p p p p p p p ."
+        ". p p p p p p p p p ."
+        ". p p p p p p p p p ."
+    ;
+}
+
+.superior {
+    grid-area: s;
+}
+
+.painel {
+    grid-area: p;
+}
