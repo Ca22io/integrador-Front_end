@@ -15,7 +15,7 @@
             /* Estiliza a barra de rolagem */
             ::-webkit-scrollbar {
                 width: 5%;
-                height: 10px;
+                height: 20px;
                 /* Largura da barra de rolagem */
                 background-color: transparent;
                 /* Fundo transparente */
@@ -25,7 +25,7 @@
             ::-webkit-scrollbar-thumb {
                 background-color: white;
                 /* Cor branca para o polegar */
-                border-radius: 6px;
+                border-radius: 4px;
                 /* Borda arredondada para o polegar */
             }
         </style>
@@ -73,8 +73,9 @@
             <aside
                 class="painel flex flex-wrap justify-around h-auto w-ful bg-red-900 bg-opacity-10 break-words rounded-3xl space-x-1">
 
+                <!-- Ajuste de espaçamento do aside -->
                 <div
-                    class="flex flex-col w-full h-3/5 p-1 bg-red-900 bg-opacity-20 m-5 rounded-3xl overflow-y-auto">
+                    class="flex flex-col w-full h-3/5 p-1 bg-red-900 bg-opacity-10 m-5 rounded-3xl overflow-y-auto">
 
                     <div class="w-full h-1/5 p-2 overflow-y-auto"
                         style="height: 500px;">
@@ -82,38 +83,63 @@
                             <thead class="opacity-0">
                                 <tr>
                                     <th
-                                        class=" w-4/5 text-left text-xs font-medium tracking-wider">ks</th>
+                                        class=" w-4/5 text-left text-xs font-medium tracking-wider"></th>
                                     <th
-                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider">sa</th>
+                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider"></th>
                                     <th
-                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider">as</th>
+                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="produto-row">
                                     <td
                                         class=" w-4/5 whitespace-no-wrap ">
-                                        <h3 class="text-lg font-semibold">Produto
-                                            1</h3>
+                                        <h3 class="text-lg font-semibold">Coxinha</h3>
+
+                                    </td>
+                                    <td
+                                        class="w-1/5 whitespace-no-wrap align-middle text-center text-center flex flex-row">
+
+                                        <button
+                                            class="p-1 rounded-md hover:text-white mr-2 menos">-</button>
+                                        <span class="text-lg font-semibold quantidade">1</span>
+                                        <button
+                                            class="px-2 py-1 rounded-md hover:text-white ml-2 mais">+</button>
 
                                     </td>
                                     <td
                                         class="w-1/5 whitespace-no-wrap align-middle text-center">
-
-                                        <button
-                                            class="p-1 rounded-md hover:text-white mr-2">-</button>
-                                        <span class="text-lg font-semibold">2</span>
-                                        <button
-                                            class="px-2 py-1 rounded-md hover:text-white ml-2">+</button>
-
-                                    </td>
-                                    <td
-                                        class="w-1/5 whitespace-no-wrap align-middle text-center">
-                                        <span class="text-lg font-semibold">R$<span id="valor_produto">10,00</span>
+                                        <span class="text-lg font-semibold">R$<span
+                                                class="valor_produto">10,00</span>
                                         </span>
-                                        
+
                                     </td>
-                                </tr>     
+                                </tr>
+
+                                <tr class="produto-row">
+                                    <td
+                                        class=" w-4/5 whitespace-no-wrap ">
+                                        <h3 class="text-lg font-semibold">Guaravita</h3>
+
+                                    </td>
+                                    <td
+                                        class="w-1/5 whitespace-no-wrap align-middle text-center text-center flex flex-row">
+
+                                        <button
+                                            class="p-1 rounded-md hover:text-white mr-2 menos">-</button>
+                                        <span class="text-lg font-semibold quantidade">1</span>
+                                        <button
+                                            class="px-2 py-1 rounded-md hover:text-white ml-2 mais">+</button>
+
+                                    </td>
+                                    <td
+                                        class="w-1/5 whitespace-no-wrap align-middle text-center">
+                                        <span class="text-lg font-semibold">R$<span
+                                                class="valor_produto">3,25</span>
+                                        </span>
+
+                                    </td>
+                                </tr>
 
                             </tbody>
                         </table>
@@ -121,63 +147,34 @@
                     </div>
                     <div class="w-full h-1/5 text-right pr-2">
                         <span class="text-lg font-semibold mr-10">Total: </span>
-                        
-                        <span class="text-lg font-semibold ">R$<span id="valor_total">10,00</span>
+
+                        <span class="text-lg font-semibold ">R$<span
+                                id="valor_total">0,00</span>
+                        </div>
                     </div>
 
-                    <!-- Produtos no grid -->
+                    <div class="relative w-full h-auto  m-5 p-10">
+                        <!-- Botão com função de remover todos os produtos da cesta -->
+                        <button
+                            class="font-bold bg-red-900 bg-opacity-20 p-1 ml-5 rounded absolute top-0 left-0 m-2 hover:bg-opacity-30"
+                            id="esvaziar">
+                            Esvaziar Cesta
+                        </button>
 
-                    <!-- Produto 1 -->
-                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
-                          <h3 class="text-lg font-semibold">Produto 1</h3>
-                          <div class="flex items-center mt-2">
-                            <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
-                            <span class="text-lg font-semibold">1</span>
-                            <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
-                          </div>
-                          <p class="text-lg font-semibold mt-2">R$ 10,00</p>
-                        </div> -->
+                        <!-- Botão com função de finalizar o pedido e gerar o qr-code do mesmo, após fechar o qr-code a cesta é esvaziada -->
+                        <button
+                            class="font-bold bg-red-900 bg-opacity-20 p-1 mr-5 rounded absolute top-0 right-0 m-2 hover:bg-opacity-30"
+                            id="finalizar">
+                            Finalizar Compra
+                        </button>
+                    </div>
 
-                    <!-- Produto 2 -->
-                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
-                            <h3 class="text-lg font-semibold">Produto 1</h3>
-                            <div class="flex items-center mt-2">
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
-                              <span class="text-lg font-semibold">1</span>
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
-                            </div>
-                            <p class="text-lg font-semibold mt-2">R$ 10,00</p>
-                          </div> -->
+                </aside>
 
-                    <!-- Produto 3 -->
-                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
-                            <h3 class="text-lg font-semibold">Produto 1</h3>
-                            <div class="flex items-center mt-2">
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
-                              <span class="text-lg font-semibold">1</span>
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
-                            </div>
-                            <p class="text-lg font-semibold mt-2">R$ 10,00</p>
-                          </div>
-                        </div> -->
-                </div>
+            </main>
 
-                <div class="relative w-full h-auto  m-5 p-10">
-                    <button class="font-bold bg-red-900 bg-opacity-30 p-1 ml-5 rounded absolute top-0 left-0 m-2" id="cancelar">
-                        Esvaziar Cesta
-                    </button>
-                
-                    <button class="font-bold bg-red-900 bg-opacity-30 p-1 m5-5 rounded absolute top-0 right-0 m-2" id="finalizar">
-                        Finalizar Compra
-                    </button>
-                </div>
+            <script src="static/js/principal.js"></script>
+            <script src="static/js/cesta_grid_prod.js"></script>
+        </body>
 
-            </aside>
-
-        </main>
-
-        <script src="assents/js/principal.js"></script>
-        <script src="assents/js/pop-up.js"></script>
-    </body>
-
-</html>
+    </html>
