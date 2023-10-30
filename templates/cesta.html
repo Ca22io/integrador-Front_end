@@ -9,9 +9,28 @@
             rel="stylesheet">
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="static/css/cesta.css">
+        <link rel="stylesheet" href="static\css\cesta.css">
 
-        <title>Document</title>
+        <style>
+            /* Estiliza a barra de rolagem */
+            ::-webkit-scrollbar {
+                width: 5%;
+                height: 10px;
+                /* Largura da barra de rolagem */
+                background-color: transparent;
+                /* Fundo transparente */
+            }
+
+            /* Estiliza o polegar da barra de rolagem */
+            ::-webkit-scrollbar-thumb {
+                background-color: white;
+                /* Cor branca para o polegar */
+                border-radius: 6px;
+                /* Borda arredondada para o polegar */
+            }
+        </style>
+
+        <title>Cesta</title>
     </head>
 
     <body
@@ -39,12 +58,14 @@
                     </button>
                 </div>
                 <div>
-                    <button
-                        class="ml-2 pl-3 pr-3 pt-2 pb-2 bg-red-900 bg-opacity-20 rounded-2xl hover:bg-opacity-30">
+                    <a href="/">
+                        <button
+                            class="ml-2 pl-3 pr-3 pt-2 pb-2 bg-red-900 bg-opacity-20 rounded-2xl hover:bg-opacity-30">
 
-                        <i class="bi bi-house-fill"></i>
-                        <a href="/"></a>
-                    </button>
+                            <i class="bi bi-house-fill"></i>
+
+                        </button>
+                    </a>
                 </div>
 
             </aside>
@@ -53,11 +74,61 @@
                 class="painel flex flex-wrap justify-around h-auto w-ful bg-red-900 bg-opacity-10 break-words rounded-3xl space-x-1">
 
                 <div
-                    class=" w-full h-auto p-4 grid-cols-11 grid-rows-6 bg-red-900 bg-opacity-30 m-5 rounded-3xl space-y-4">
+                    class="flex flex-col w-full h-3/5 p-1 bg-red-900 bg-opacity-20 m-5 rounded-3xl overflow-y-auto">
+
+                    <div class="w-full h-1/5 p-2 overflow-y-auto"
+                        style="height: 500px;">
+                        <table class="min-w-full" id="tabela_prod">
+                            <thead class="opacity-0">
+                                <tr>
+                                    <th
+                                        class=" w-4/5 text-left text-xs font-medium tracking-wider">ks</th>
+                                    <th
+                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider">sa</th>
+                                    <th
+                                        class="w-1/5 text-left text-xs font-medium uppercase tracking-wider">as</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        class=" w-4/5 whitespace-no-wrap ">
+                                        <h3 class="text-lg font-semibold">Produto
+                                            1</h3>
+
+                                    </td>
+                                    <td
+                                        class="w-1/5 whitespace-no-wrap align-middle text-center">
+
+                                        <button
+                                            class="p-1 rounded-md hover:text-white mr-2">-</button>
+                                        <span class="text-lg font-semibold">2</span>
+                                        <button
+                                            class="px-2 py-1 rounded-md hover:text-white ml-2">+</button>
+
+                                    </td>
+                                    <td
+                                        class="w-1/5 whitespace-no-wrap align-middle text-center">
+                                        <span class="text-lg font-semibold">R$<span id="valor_produto">10,00</span>
+                                        </span>
+                                        
+                                    </td>
+                                </tr>     
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="w-full h-1/5 text-right pr-2">
+                        <span class="text-lg font-semibold mr-10">Total: </span>
+                        
+                        <span class="text-lg font-semibold ">R$<span id="valor_total">10,00</span>
+                    </div>
+
                     <!-- Produtos no grid -->
 
-                        <!-- Produto 1 -->
-                        <div class=" flex justify-between bg-gray-100 p-2">
+                    <!-- Produto 1 -->
+                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
                           <h3 class="text-lg font-semibold">Produto 1</h3>
                           <div class="flex items-center mt-2">
                             <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
@@ -65,10 +136,21 @@
                             <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
                           </div>
                           <p class="text-lg font-semibold mt-2">R$ 10,00</p>
-                        </div>
-                      
-                        <!-- Produto 2 -->
-                        <div class=" flex justify-between bg-gray-100 p-2">
+                        </div> -->
+
+                    <!-- Produto 2 -->
+                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
+                            <h3 class="text-lg font-semibold">Produto 1</h3>
+                            <div class="flex items-center mt-2">
+                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
+                              <span class="text-lg font-semibold">1</span>
+                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
+                            </div>
+                            <p class="text-lg font-semibold mt-2">R$ 10,00</p>
+                          </div> -->
+
+                    <!-- Produto 3 -->
+                    <!-- <div class=" flex justify-between bg-gray-100 p-2">
                             <h3 class="text-lg font-semibold">Produto 1</h3>
                             <div class="flex items-center mt-2">
                               <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
@@ -77,31 +159,16 @@
                             </div>
                             <p class="text-lg font-semibold mt-2">R$ 10,00</p>
                           </div>
-                      
-                        <!-- Produto 3 -->
-                        <div class=" flex justify-between bg-gray-100 p-2">
-                            <h3 class="text-lg font-semibold">Produto 1</h3>
-                            <div class="flex items-center mt-2">
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white mr-2">-</button>
-                              <span class="text-lg font-semibold">1</span>
-                              <button class="px-2 py-1 rounded-md bg-blue-500 text-white ml-2">+</button>
-                            </div>
-                            <p class="text-lg font-semibold mt-2">R$ 10,00</p>
-                          </div>
-                        </div>
+                        </div> -->
                 </div>
 
-                <div class="flex justify-between w-full pl-5 pr-5">
-                    <button
-                        class="font-bold bg-red-900 bg-opacity-30 p-4 rounded"
-                        id="cancelar">
-                        Esvaziar cesta
+                <div class="relative w-full h-auto  m-5 p-10">
+                    <button class="font-bold bg-red-900 bg-opacity-30 p-1 ml-5 rounded absolute top-0 left-0 m-2" id="cancelar">
+                        Esvaziar Cesta
                     </button>
-
-                    <button
-                        class="font-bold bg-red-900 bg-opacity-30 p-2 rounded"
-                        id="finalizar">
-                        Finalizar compra
+                
+                    <button class="font-bold bg-red-900 bg-opacity-30 p-1 m5-5 rounded absolute top-0 right-0 m-2" id="finalizar">
+                        Finalizar Compra
                     </button>
                 </div>
 
