@@ -1,0 +1,80 @@
+/* Estilos para o fundo desfocado (overlay) */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(168, 148, 148, 0.50);
+  /* Cor do fundo com transparência */
+  z-index: 2;
+  /* Coloca o overlay acima do popup */
+  backdrop-filter: blur(10px);
+  /* Efeito de desfoque */
+}
+
+/* Estilos para o popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(168, 148, 148, 0.50);
+  z-index: 3;
+  border-radius: 10px;
+  /* Coloca o popup acima do overlay */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* Sombra para sensação de profundidade */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Estilos para o botão de abrir o popup */
+#openPopup,
+#contato1 {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos para os botões dentro do popup */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.imgpop_up {
+  border-radius: 5px;
+  width: 10vw;
+  height: 15vh;
+  margin: 5px;
+}
+
+#addToFavorites,
+#addToCart {
+  border-radius: 10px;
+  background-color: rgba(168, 148, 148, 0.2);
+}
+
+#addToFavorites:hover,
+#addToCart:hover {
+  background: rgba(168, 148, 148, 0.5);
+  color: #ffffd9;
+}
+
+.popup-content>p {
+  font-size: 1rem;
+}
